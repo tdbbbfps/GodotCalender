@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cekowmef0esqm"]
 
-[ext_resource type="Theme" uid="uid://dw80vw1bqe3nj" path="res://calender/themes/default_theme.tres" id="1_cvoqh"]
-[ext_resource type="Script" uid="uid://cd1pmm5dl1rtw" path="res://calender/calender.gd" id="2_d4rix"]
+[ext_resource type="Theme" uid="uid://dw80vw1bqe3nj" path="res://addons/godot_calender/themes/default_theme.tres" id="1_cvoqh"]
+[ext_resource type="Script" uid="uid://cd1pmm5dl1rtw" path="res://addons/godot_calender/calender.gd" id="2_d4rix"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4rix"]
 content_margin_top = 4.0
@@ -52,7 +52,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 24
-text = "Year"
+text = "2025"
 
 [node name="Header" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -67,7 +67,7 @@ text = "<"
 [node name="MonthLabel" type="Label" parent="PanelContainer/VBoxContainer/Header"]
 custom_minimum_size = Vector2(80, 32)
 layout_mode = 2
-text = "Month"
+text = "Apr"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -172,10 +172,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -60.0
-offset_top = -54.0
-offset_right = 60.0
-offset_bottom = 54.0
+offset_right = 120.0
+offset_bottom = 108.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
