@@ -21,6 +21,10 @@ window/size/viewport_height=360
 window/stretch/mode="canvas_items"
 window/vsync/vsync_mode=0
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://calender/locales/localization.en.translation", "res://calender/locales/localization.jp.translation", "res://calender/locales/localization.zh.translation")
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

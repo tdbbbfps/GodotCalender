@@ -1,3 +1,4 @@
+@tool
 extends Control
 class_name Calender
 
@@ -10,7 +11,7 @@ var current_month : int = 0:
 		if (value == 0): 
 			current_year -= 1
 			current_month = 12
-		elif (value == 12): 
+		elif (value == 13): 
 			current_year += 1
 			current_month = 1
 		else:
@@ -21,7 +22,7 @@ var current_year : int = 0:
 	set(value):
 		current_year = value
 		year_button.text = str(current_year)
-var selected_date : Dictionary
+signal _on_date_selected(date : Dictionary)
 
 func _ready() -> void:
 	# Initialize current year and month
@@ -59,7 +60,7 @@ func generate_calender():
 		day_button.custom_minimum_size = Vector2(32, 32)
 		day_button.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 		day_button.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-		day_button.pressed.connect(_on_date_selected.bind(int(day_button.text)))
+		day_button.pressed.connect(date_selected.bind(int(day_button.text)))
 		# Set focus if the day is current system day
 		if (i == get_date_param("day") and is_current_month()):
 			day_button.call_deferred("grab_focus")
@@ -79,9 +80,9 @@ func generate_calender():
 		blank.disabled = true
 		days_grid.add_child(blank)
 
-func _on_date_selected(day : int):
-	selected_date = {"year" : current_year, "month" : current_month, "day" : day}
-	print(selected_date)
+func date_selected(day : int):
+	var selected_date = {"year" : current_year, "month" : current_month, "day" : day}
+	_on_date_selected.emit(selected_date)
 
 # Turn to previous month
 func _on_prev_month_btn_pressed() -> void:

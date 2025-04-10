@@ -1,13 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cekowmef0esqm"]
 
+[ext_resource type="Theme" uid="uid://dw80vw1bqe3nj" path="res://calender/themes/default_theme.tres" id="1_cvoqh"]
 [ext_resource type="Script" uid="uid://cd1pmm5dl1rtw" path="res://calender/calender.gd" id="2_d4rix"]
-
-[sub_resource type="Theme" id="Theme_d4rix"]
-default_font_size = 24
-Button/font_sizes/font_size = 12
-Label/colors/font_color = Color(1, 1, 1, 1)
-Label/colors/font_outline_color = Color(0, 0, 0, 1)
-Label/constants/outline_size = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4rix"]
 content_margin_top = 4.0
@@ -24,7 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_d4rix")
+theme = ExtResource("1_cvoqh")
 script = ExtResource("2_d4rix")
 month_label = NodePath("PanelContainer/VBoxContainer/Header/MonthLabel")
 year_button = NodePath("PanelContainer/VBoxContainer/YearButton")
@@ -95,7 +89,7 @@ custom_minimum_size = Vector2(32, 16)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 12
-text = "Sun"
+text = "Sunday"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -104,7 +98,7 @@ custom_minimum_size = Vector2(32, 16)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 12
-text = "Mon"
+text = "Monday"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -113,7 +107,7 @@ custom_minimum_size = Vector2(32, 16)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 12
-text = "Tue"
+text = "Tuesday"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -122,7 +116,7 @@ custom_minimum_size = Vector2(32, 16)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 12
-text = "Wed"
+text = "Wednesday"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -131,7 +125,7 @@ custom_minimum_size = Vector2(32, 16)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 12
-text = "Thu"
+text = "Thursday"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -140,7 +134,7 @@ custom_minimum_size = Vector2(32, 16)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 12
-text = "Fri"
+text = "Friday"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -149,7 +143,7 @@ custom_minimum_size = Vector2(32, 16)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 12
-text = "Sat"
+text = "Saturday"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -167,7 +161,6 @@ transparent_bg = false
 title = "Year Selector"
 initial_position = 1
 size = Vector2i(120, 108)
-visible = true
 transparent = false
 extend_to_title = true
 theme_override_styles/panel = SubResource("StyleBoxFlat_s6mpg")
