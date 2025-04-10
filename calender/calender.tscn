@@ -1,0 +1,204 @@
+[gd_scene load_steps=5 format=3 uid="uid://cekowmef0esqm"]
+
+[ext_resource type="Script" uid="uid://cd1pmm5dl1rtw" path="res://calender/calender.gd" id="2_d4rix"]
+
+[sub_resource type="Theme" id="Theme_d4rix"]
+default_font_size = 24
+Button/font_sizes/font_size = 12
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4rix"]
+content_margin_top = 4.0
+bg_color = Color(0.129558, 0.129558, 0.129558, 0.686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s6mpg"]
+bg_color = Color(0.136826, 0.136826, 0.136826, 1)
+
+[node name="Calender" type="Control" node_paths=PackedStringArray("month_label", "year_button", "days_grid", "year_selector", "scroll_container", "year_container")]
+texture_filter = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_d4rix")
+script = ExtResource("2_d4rix")
+month_label = NodePath("PanelContainer/VBoxContainer/Header/MonthLabel")
+year_button = NodePath("PanelContainer/VBoxContainer/YearButton")
+days_grid = NodePath("PanelContainer/VBoxContainer/DaysGrid")
+year_selector = NodePath("YearSelector")
+scroll_container = NodePath("YearSelector/ScrollContainer")
+year_container = NodePath("YearSelector/ScrollContainer/YearContainer")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(320, 316)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -90.0
+offset_right = 160.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d4rix")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="YearButton" type="Button" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "Year"
+
+[node name="Header" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="PrevMonthBtn" type="Button" parent="PanelContainer/VBoxContainer/Header"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = "<"
+
+[node name="MonthLabel" type="Label" parent="PanelContainer/VBoxContainer/Header"]
+custom_minimum_size = Vector2(80, 32)
+layout_mode = 2
+text = "Month"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextMonthBtn" type="Button" parent="PanelContainer/VBoxContainer/Header"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+text = ">"
+
+[node name="Weekdays" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(320, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 9
+alignment = 1
+
+[node name="Sunday" type="Label" parent="PanelContainer/VBoxContainer/Weekdays"]
+custom_minimum_size = Vector2(32, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 12
+text = "Sun"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Monday" type="Label" parent="PanelContainer/VBoxContainer/Weekdays"]
+custom_minimum_size = Vector2(32, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 12
+text = "Mon"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tuesday" type="Label" parent="PanelContainer/VBoxContainer/Weekdays"]
+custom_minimum_size = Vector2(32, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 12
+text = "Tue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Wednesday" type="Label" parent="PanelContainer/VBoxContainer/Weekdays"]
+custom_minimum_size = Vector2(32, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 12
+text = "Wed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Thursday" type="Label" parent="PanelContainer/VBoxContainer/Weekdays"]
+custom_minimum_size = Vector2(32, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 12
+text = "Thu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Friday" type="Label" parent="PanelContainer/VBoxContainer/Weekdays"]
+custom_minimum_size = Vector2(32, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 12
+text = "Fri"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Saturday" type="Label" parent="PanelContainer/VBoxContainer/Weekdays"]
+custom_minimum_size = Vector2(32, 16)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 12
+text = "Sat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DaysGrid" type="GridContainer" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 9
+theme_override_constants/v_separation = 2
+columns = 7
+
+[node name="YearSelector" type="PopupPanel" parent="."]
+disable_3d = true
+transparent_bg = false
+title = "Year Selector"
+initial_position = 1
+size = Vector2i(120, 108)
+visible = true
+transparent = false
+extend_to_title = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_s6mpg")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="YearSelector"]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -54.0
+offset_right = 60.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="YearContainer" type="VBoxContainer" parent="YearSelector/ScrollContainer"]
+custom_minimum_size = Vector2(80, 88)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_constants/separation = 1
+alignment = 1
+
+[connection signal="button_down" from="PanelContainer/VBoxContainer/YearButton" to="." method="_on_year_button_button_down"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Header/PrevMonthBtn" to="." method="_on_prev_month_btn_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Header/NextMonthBtn" to="." method="_on_next_month_btn_pressed"]
