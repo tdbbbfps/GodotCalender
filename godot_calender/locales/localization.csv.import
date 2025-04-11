@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c78v0a6840psd"
+
+[deps]
+
+files=["res://godot_calender/locales/localization.en.translation", "res://godot_calender/locales/localization.zh.translation", "res://godot_calender/locales/localization.jp.translation"]
+
+source_file="res://godot_calender/locales/localization.csv"
+dest_files=["res://godot_calender/locales/localization.en.translation", "res://godot_calender/locales/localization.zh.translation", "res://godot_calender/locales/localization.jp.translation"]
+
+[params]
+
+compress=true
+delimiter=0

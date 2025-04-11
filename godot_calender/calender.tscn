@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cekowmef0esqm"]
 
-[ext_resource type="Theme" uid="uid://dw80vw1bqe3nj" path="res://themes/default_theme.tres" id="1_cvoqh"]
-[ext_resource type="Script" uid="uid://cd1pmm5dl1rtw" path="res://calender.gd" id="2_d4rix"]
+[ext_resource type="Theme" uid="uid://dw80vw1bqe3nj" path="res://godot_calender/themes/default_theme.tres" id="1_cvoqh"]
+[ext_resource type="Script" uid="uid://cd1pmm5dl1rtw" path="res://godot_calender/calender.gd" id="2_d4rix"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4rix"]
 content_margin_top = 4.0

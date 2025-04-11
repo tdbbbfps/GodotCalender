@@ -23,11 +23,11 @@ window/vsync/vsync_mode=0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godotcalender/plugin.cfg")
+enabled=PackedStringArray()
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://locales/localization.en.translation", "res://locales/localization.jp.translation", "res://locales/localization.zh.translation")
+locale/translations=PackedStringArray("res://godot_calender/locales/localization.en.translation", "res://godot_calender/locales/localization.jp.translation", "res://godot_calender/locales/localization.zh.translation")
 
 [rendering]
 
