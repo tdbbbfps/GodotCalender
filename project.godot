@@ -27,7 +27,7 @@ enabled=PackedStringArray("res://addons/godotcalender/plugin.cfg")
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://addons/godot_calender/locales/localization.en.translation", "res://addons/godot_calender/locales/localization.jp.translation", "res://addons/godot_calender/locales/localization.zh.translation")
+locale/translations=PackedStringArray("res://locales/localization.en.translation", "res://locales/localization.jp.translation", "res://locales/localization.zh.translation")
 
 [rendering]
 

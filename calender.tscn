@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cekowmef0esqm"]
 
-[ext_resource type="Theme" uid="uid://dw80vw1bqe3nj" path="res://addons/godotcalender/themes/default_theme.tres" id="1_cvoqh"]
-[ext_resource type="Script" uid="uid://cd1pmm5dl1rtw" path="res://addons/godotcalender/calender.gd" id="2_d4rix"]
+[ext_resource type="Theme" uid="uid://dw80vw1bqe3nj" path="res://themes/default_theme.tres" id="1_cvoqh"]
+[ext_resource type="Script" uid="uid://cd1pmm5dl1rtw" path="res://calender.gd" id="2_d4rix"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d4rix"]
 content_margin_top = 4.0
@@ -10,7 +10,7 @@ bg_color = Color(0.129558, 0.129558, 0.129558, 0.686275)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s6mpg"]
 bg_color = Color(0.136826, 0.136826, 0.136826, 1)
 
-[node name="Calender" type="Control"]
+[node name="Calender" type="Control" node_paths=PackedStringArray("month_label", "year_button", "days_grid", "year_selector", "scroll_container", "year_container")]
 texture_filter = 2
 layout_mode = 3
 anchors_preset = 15
@@ -20,6 +20,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_cvoqh")
 script = ExtResource("2_d4rix")
+month_label = NodePath("PanelContainer/VBoxContainer/Header/MonthLabel")
+year_button = NodePath("PanelContainer/VBoxContainer/YearButton")
+days_grid = NodePath("PanelContainer/VBoxContainer/DaysGrid")
+year_selector = NodePath("YearSelector")
+scroll_container = NodePath("YearSelector/ScrollContainer")
+year_container = NodePath("YearSelector/ScrollContainer/YearContainer")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(320, 316)
